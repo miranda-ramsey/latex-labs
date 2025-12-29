@@ -1,0 +1,55 @@
+WARNING : Could not find a target 'pdf', but found a target 'print' with format='pdf'; using this target.
+INFO    : Building target print
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /home/miranda/latex-labs/output/print.
+INFO    : discovering source file's directory name: /home/miranda/latex-labs/source
+INFO    : verifying and expanding input directory: /home/miranda/latex-labs/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/miranda/latex-labs/generated-assets
+INFO    : verifying and expanding input directory: /home/miranda/latex-labs/source/../assets
+INFO    : input directory expanded to absolute path: /home/miranda/latex-labs/assets
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /home/miranda/latex-labs/source/main.ptx to LaTeX as /tmp/ptx-z4syq8oq/main.tex
+INFO    : XSL conversion of /home/miranda/latex-labs/source/main.ptx by /home/miranda/.ptx/2.17.1/core/xsl/pretext-latex.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+INFO    : successful application of /home/miranda/.ptx/2.17.1/core/xsl/pretext-latex.xsl
+INFO    : Removing temporary directory /tmp/ptx-z4syq8oq
+INFO    : Removing temporary directory /tmp/ptx-4aoj2o41
+INFO    : 
+Success! The output is in /home/miranda/latex-labs/output/print.
+
+INFO    : 

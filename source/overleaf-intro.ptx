@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="overleaf-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Intro to LaTeX on Overleaf</title>
+
+    <introduction>
+        <p>
+            While there are options to download and fine-tune software for creating and processing
+            \LaTeX documents on your machine, as a beginner it can be a daunting task to get
+            all of the appropriate software and settings just right. To make things easy for us, we
+            will be using Overleaf, an online LaTeX editor.
+        </p>
+    </introduction>
+    
+    <objectives>
+        <ol>
+            <li>
+                <p>
+                    Create an Overleaf account and create your first project.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Use LaTeX commands and parameters to change the title of your document.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Introduce yourself to me, writing a few sentences about yourself separated by
+                    line breaks.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Use LaTeX formatting commands to write out your schedule for the term.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Save, download, and share your LaTeX project.
+                </p>
+            </li>
+        </ol>
+    </objectives>
+
+
+    <section>
+        <title>Setting up your account</title>
+        <paragraphs>
+            <p>
+                To begin, visit <url href="https://www.overleaf.com">Overleaf</url> and click the
+                "sign up" icon in the top right. You may link to a Google account, or create an
+                account manually with your email and password. You will need to confirm your email
+                address, then enter some details about yourself. <em>You do not need the premium
+                version</em>, so go ahead and "skip" when you are offered the option.
+            </p>
+            <p>
+                Finally, you will reach a page with three options:
+                <ul>
+                    <li>
+                        Create a new project
+                    </li>
+                    <li>
+                        Learn LaTeX with a tutorial
+                    </li>
+                    <li>
+                        Browse templates
+                    </li>
+                </ul>
+                The LaTeX tutorial may be a helpful second resource, with a lot of overlap with 
+                these LaTeX labs. Feel free to bookmark the link if you want to visit the tutorial 
+                later. For now, click <em>Create a new project</em> and select <em>Blank 
+                project</em>. Enter a title in the format "lastname-lab-1" (with your last name in 
+                place of "lastname", e.g. "ramsey-lab-1") and click Create.
+            </p>
+        </paragraphs>
+    </section>
+
+    <section>
+        <title>Your first project</title>
+        <paragraphs>
+            <p>
+                Take a look at what you see in the project page:
+                <ul>
+                    <li>
+                        Along the top navigation bar, you should see the typical options File, Edit,
+                        Insert, View, Format, Help. In the center is the name of your document, and
+                        clicking the name gives you a few different options. On the right are some 
+                        icons and a button to Share and Upgrade. 
+                    </li>
+                    <li>
+                        In the left column, there is a File Tree. Sometimes LaTeX projects can get 
+                        very large and feature a multitude of files, and this is a way to keep track
+                        of them all in a nice structure. There are also some options like Project 
+                        Search, Integrations, Review Panel, and Chat. For now, we only need one file
+                        in our file tree, and we don't need those other options. You can click the X
+                        icon at the top of the column to close the File Tree.
+                    </li>
+                    <li>
+                        Now there are two major sections of your project: On the left is a Code
+                        Editor, and on the right is a PDF. We will be making edits to the code in 
+                        the editor on the left, and then Overleaf will "compile" that code to 
+                        decide what the PDF will look like.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Take a look at the PDF on the right. At the top of the page is the title: 
+                lastname-lab-1. That's not a very nice looking title! While the "lastname-lab-1"
+                format is great for the name of the project itself, it is not a great title for
+                the document itself. How can we change it?
+            </p>
+            <p>
+                Look on the left. The code currently looks like this:
+            </p>
+                    <program language="latex">
+                    \begin{verbatim}
+                    \documentclass{article}
+                    \usepackage{graphicx} % Required for inserting images
+
+                    \title{ramsey-lab-1}
+                    \author{Miranda Ramsey}
+                    \date{January 2025}
+
+                    \begin{document}
+
+                    \maketitle
+
+                    \section{Introduction}
+
+                    \end{document}
+                    </program>
+            <p>
+                Every line has something in common: they each begin with a backslash (\) 
+                followed by a word, and some of them then have additional stuff inside of {curly 
+                braces}. These backslash-word-bracket chunks are called <term>commands</term>. 
+                All commands have a backslash followed by a word. Sometimes commands stand by
+                themselves, like <c>\maketitle</c>. Others require a little more details,
+                called <term>parameters</term>, which work like function inputs to tell LaTeX what
+                you want the command to do.
+            </p>
+            <p>
+                For example, look at the line:
+                <program line-numbers="no" language="latex">
+                    \title{ramsey-lab-1}
+                </program>
+                Here, "title" is the command, with "ramsey-lab-1" as a parameter. Change the 
+                title by replacing the parameter with a new one of your choice.
+                <program line-numbers="no" language="latex">
+                    \title{My First \LaTeX{} Project}
+                </program>
+                Now, click the "Recompile" button above the PDF, and see your changes in effect!
+            </p>
+                <aside>
+                    <p>
+                    See how I used the <c>\LaTeX{}</c> command, with no parameters, in my title?
+                    LaTeX has a command for printing the LaTeX logo: <m>\LaTeX</m>. Try it for 
+                    yourself!
+                </p>
+                </aside>
+        </paragraphs>
+    </section>
+
+    <section>
+        <title>Introducing yourself with content</title>
+        <paragraphs>
+            <p>
+                LaTeX uses <term>environments</term> to organize and process the content of your
+                document. Presently, we are using one environment: the <c>document</c> environment,
+                which is passed through the <c>\begin</c> command on line 8 and the <c>\end</c> 
+                command on line 14. Everything inside of the <c>document</c> environment gets 
+                printed as a part of the document. The stuff before <c>\begin{document}</c> is 
+                called the <term>preamble</term>, which we will talk about in another lab.
+            </p>
+            <p>
+                The document currently has two parts: the <c>\maketitle</c> command which takes the
+                title information in the preamble and outputs it in a nice centered format on the
+                first page, and the <c>\section{Introduction}</c> command which creates the nice
+                header for our first section. Try typing something on lines 9, 11, and 13 and
+                compile to see what happens.
+            </p>
+            <p>
+                Naturally, where ever you add text between these commands determines where Latex
+                places that content in the document. The <c>\maketitle</c> command specifically 
+                creates a title page, so anything before it ends up on its own page. Go ahead and 
+                delete anything you typed on the line before <c>\maketitle</c>.
+            </p>
+            <p>
+                Edit your document to add the following content:
+                <ul>
+                    <li>
+                        <p>
+                            In the line of text before the <c>\section</c>, introduce the project. 
+                            Something like "This is a lab to learn how to create simple 
+                            documents in LaTeX."
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            After the <c>\section</c> command, write a few lines about yourself. Try
+                            putting sentences on different lines in the code and compile. You'll notice
+                            that LaTeX places all of the sentences in the same paragraph:
+                            <program line-numbers="no" language="latex">
+                                this is line number 1
+                                line number 2 is here
+                                three lines are not enough
+                                the final line
+                            </program>
+                            gets printed exactly the same as
+                            <program line-numbers="no" language="latex">
+                                this is line number 1 line number 2 is here three lines are not enough the final line
+                            </program>
+                            LaTeX ignores the first line break in your code - this is something that 
+                            allows you to keep your code nice and tidy, which you will come to
+                            appreciate - so in order to get line breaks in your document, you have to 
+                            tell LaTeX that is what you want. You can do this multiple ways:
+                            <program line-numbers="no" language="latex">
+                                this is line number 1
+                         
+                                line number 2 is here\\
+                                three lines are not enough\newline
+                                the final line
+                            </program>
+                            That is, you can use a second line break in the code (leaving an empty line
+                            between paragraphs), you can use a double backslash <c>\\</c>, or you can
+                            use the command <c>\newline</c>. 
+                        </p>
+                        <p>
+                            Use line breaks to put each sentence you wrote about yourself on a new 
+                            line.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <program language="latex">
+                \documentclass{article}
+                \usepackage{graphicx} % Required for inserting images
+
+                \title{My First \LaTeX{} Project}
+                \author{Miranda Ramsey}
+                \date{January 2025}
+
+                \begin{document}
+                \
+
+                \maketitle
+                This is a lab to learn how to create simple documents in LaTeX.
+                \section{Introduction}
+                I am a math instructor living in Portland, Oregon.
+
+                I earned my Master's degree from Portland State University in 2021.
+
+                My focus in grad school was Discrete Math, and I wrote most of my assignments in LaTeX!
+
+                \end{document}
+            </program>
+        </paragraphs>
+    </section>
+
+    <section>
+        <title>Sections, Lists, and Text Formatting</title>
+        <paragraphs>
+            <p>
+                Lets add a bit more to your document. 
+                <ol>
+                    <li>
+                        <p>
+                            First, add a subsection after your introduction using the command
+                            <c>\subsection*{My Schedule}</c>.
+                            Note that I added a * here. LaTeX automatically numbers sections,
+                            subsections, and other blocks. This tells LaTeX to suppress the 
+                            numbering of the subsection. Try it both with and without the *. You 
+                            can also add a * to the <c>\section*{Introduction}</c> command if you 
+                            like. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            After the subsection, create a <term>list</term> environment by 
+                            adding the commands <c>\begin{itemize}</c> and <c>\end{itemize}</c>. 
+                            To add list items, use <c>\item</c> on a new line inside of the 
+                            environment. 
+                        </p>
+                        <aside>
+                            <p>
+                                Remember to <c>\end{}</c> all environments that you <c>\begin{}</c>! 
+                                If you forget, you will get an error when you try to compile.
+                            </p>
+                        </aside>
+                    </li>
+                    <li>
+                        <p>
+                            Create an <c>\item</c> for each class you are taking, and after the item
+                            command, type the course number, title, and days/times if applicable.
+                        </p>
+                        <program language="latex">
+                            \begin{itemize}
+                                \item MTH231 Elements of Discrete Mathematics I Tuesday/Thursday 1:00PM - 3:40PM
+                                \item WR240 Creative Writing (Non-Fiction) M/W 10:30AM - 12:20 PM
+                                \item BAS650 Graduate Studies in Underwater Basketweaving Online N/A
+                            \end{itemize}
+                        </program>
+                        <p>
+                            Compile to check your list. You should get a bulleted list. Would you 
+                            prefer a numbered list? Try the <c>enumerate</c> environment instead of 
+                            <c>itemize</c>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Now lets add some flavor to your text. The following commands are the 
+                            basic formatting options you may be familiar with:
+                            <ul>
+                                <li>
+                                    <p>
+                                        <c>\textbf{...}</c> creates <m>\textbf{bold}</m> text.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <c>\textit{...}</c> creates <m>\textit{italic}</m> text.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <c>\underline{...}</c> creates <m>\underline{underlined}</m> 
+                                        text.
+                                    </p>
+                                </li>
+                            </ul>
+                        </p>
+                        <p>
+                            Implement these by putting each course number in bold text, each course
+                            title in underline, and each day/time in italics.
+                        </p>
+                        <program language="latex">
+                            \begin{itemize}
+                                \item 
+                                \textbf{MTH231} 
+                                \underline{Elements of Discrete Mathematics I}
+                                \textit{Tu/Th 1:00PM - 3:40PM}
+                                \item 
+                                \textbf{WR240} 
+                                ...
+                            \end{itemize}
+                        </program>
+                        <p>
+                            Note how I use the fact that LaTex ignores line breaks to organize my 
+                            code in a structured way so I can read it easily. It may be a pain to 
+                            have to manually break lines, but maybe you can see how convenient it 
+                            is in the end!
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <p>
+                That's all you are required to do for this lab, but feel free to play around within
+                the document environment. Add more sections, more paragraphs, more lists and
+                formatting, as you desire.
+            </p>
+        </paragraphs>
+    </section>
+
+    <section>
+        <title>Saving and sharing your document</title>
+        <paragraphs>
+            <p>
+                When you are finished with your document, there are two parts of your project that
+                you may want to share. 
+                <ul>
+                    <li>
+                        <p>
+                            Most of the time, you want to share the PDF output - after all, that's
+                            what you came here for! Next to the "Recompile" button is an icon to
+                            download the PDF of your document.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Sometimes you will want to share the <term>source code</term> itself.
+                            Perhaps you are collaborating with someone, or want someone to review
+                            your code, or perhaps you want to share your code with your instructor
+                            to get credit for completing a lab assignment. To get the source code, 
+                            click the document title at the top of the screen, and select
+                            <em>Download as source (.zip)</em>. This will compress all of your 
+                            source files into a .zip file and download it. 
+                        </p>
+                        <p>
+                            In this case, the whole project is in one file (main.tex), but that
+                            won't always be the case. Go ahead and download the source .zip file
+                            to your computer.
+                        </p>
+                    </li>
+                </ul>
+                Now you can upload the PDF and/or ZIP files. Follow the instructions for your lab
+                assignment. 
+            </p>
+            <p>
+                <alert>Congratulations!</alert> You've completed your first LaTeX project!
+            </p>
+        </paragraphs>
+    </section>
+</chapter>
