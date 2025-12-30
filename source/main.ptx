@@ -12,6 +12,7 @@
 
     <!-- Include chapters -->
     <xi:include href="./overleaf-intro.ptx" />
+    <xi:include href="./math-symbols.ptx" />
 
     <!-- Include Activities
     <xi:include href="./activities.ptx" />
