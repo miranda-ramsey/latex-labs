@@ -64,6 +64,42 @@ var ptx_lunr_docs = [
   "body": "source code "
 },
 {
+  "id": "math-symbols",
+  "level": "1",
+  "url": "math-symbols.html",
+  "type": "Lab",
+  "number": "2",
+  "title": "Math and Symbols",
+  "body": " Math and Symbols   Consider the difference between and   Notice how much nicer and more professional the second line looks! The most useful aspect of LaTeX is the ability to typeset good-looking mathematics. In this lab, you will use the amsmath package to present math symbols, equations, and show your work on multi-step problems.      Include a package in the preamble of a LaTeX document.    Write statements including inline mathematics.    Use the equation environment to present standalone equations.    Use the align environment to show your work as you simplify expressions and solve equations.      Setting up your project     Begin by creating a new blank project. Navigate to and click \"New Project\" in the top right. Name your project \"lastname-lab-2\" and then change the title in the \\title{} command like you did in Lab 1.    In order to use math language we want to include a package . LaTeX is a flexible tool that allows for all sorts of typesetting options with countless commands, and if your file included the code to use all of them, it would be very large. Instead, the code to compile different kinds of LaTeX features are stored in different packages, and you can pick the package you want. In this case, Overleaf automatically includes the graphicx package on line 2.  \\documentclass{article} \\usepackage{graphicx} % Required for inserting images \\title{Lab 2: Math and Symbols} ...  We don't need the graphicx package, but we do need the amsmath package. This is a package created by the American Math Society that adds extra math commands to your LaTeX file. To use the amsmath package, simply substitute amsmath into the usepackage parameter instead of graphicx .    The % symbol after the command starts a comment . This is text that does not get compiled. On any line, anything after a % will be ignored, so you can leave yourself little messages and explanations.  The comment that is there is for the graphicx package and you don't need it. Put a different comment there that is relevant to you, explaining why you are including amsmath .    Now your project is ready for math!     Writing inline mathematics with $...$   By \"inline\", we mean the math that appears in the middle of normal text, like if I wanted to discuss or tell you that a quadratic equation has the form .  To start, change the name of your Introduction section to \"The Pythagorean Theorem\". Write a paragraph in this section describing what you know about the Pythagorean Theorem, including what the letters stand for and what the equation is. To get the nice math font to display, place dollar signs around the math. For instance, $f(x) = x^2 + 2$ will be compiled to .  The dollar signs offer a quick way to begin and end an \"inline math\" environment, without a traditional backslash command.     Displaying math with equation   Sometimes an equation is really important and we want to prominently display it in the center of the page. For this we will use the equation environment which displays math like this: We will use the Quadratic Formula to demonstrate this environment.    Create a new section titled \"The Quadratic Formula\". Introduce the formula by first explaining that it provides solutions to equations of the form To display the equation this way, include the following code: \\begin{equation*} ax^2 + bx + c = 0 \\end{equation*} Note the following:   The environment has a \\begin{} and \\end{} command with equation* passed as a parameter.    The parameter includes a *. If you remove the *, it labels the equation with a number that you can reference later (think about how often you see this in textbooks!). I chose to have a * here to suppress the number; it's up to you if you want to include it.    The equation inside does not need dollar sign $...$ tags.       Explain how the quadratic formula is used, in your own words. Use inline mathematics when appropriate to talk about variables. When you are ready to state the formula, you want it to look like this: In addition to the \\begin{equation*}...\\end{equation*} tags, you will need the following commands:    \\frac{}{} creates a fraction. The first parameter becomes the numerator, the second becomes the denominator. For example, \\frac{x+1}{2} becomes .     \\pm proves the \"plus or minus\" symbol.     \\sqrt{} creates a square root symbol. For example, \\sqrt{x^2 + 2x + 1} becomes .          Aligning mathematics with align   When evaluating expressions or solving equations, we like to have the equals signs vertically aligned. If you just write each line as a separate equation , you won't get good results. For example: \\begin{equation*} (x + 1)(x + 2) = x^2 + x + 2x + 2 \\end{equation*} \\begin{equation*} = x^2 + 3x + 2 \\end{equation*} will display as    What we actually want will look more like this: To accomplish this, we use the align environment. \\begin{align*} (x + 1)(x + 2) &= x^2 + x + 2x + 2\\\\ &= x^2 + 3x + 2 \\end{equation*} Note the following:   The environment has a \\begin{} and \\end{} command with align* passed as a parameter.    The line is ended with a double backslash (see Lab 1).    The alignment is controlled by an ampersand sign &. Wherever you place this on each line will determine how LaTeX aligns the lines vertically.      You can include more than one & on each line, but the results may be hard to predict with your intuition. Try it out and see what you get! Each line should have the same number of & signs.   Now to apply this in your document.   Create a new section titled \"Expressions and Equations\". In this section, replicate the following: In addition to the \\begin{align*}...\\end{align*} tags, you will need the following commands:    \\neq creates the \"not equal\" sign.       Create a new section titled \"Expressions and Equations\". In this section, replicate the following: In addition to the \\begin{align*}...\\end{align*} tags, you will need the following commands:    \\notin creates the \"not in\" sign.     \\{ ... \\} to create curly braces in your math. Since curly braces are so common in LaTeX, the compiler gets confused if you use them on their own. The backslashes tell the compiler that you intend to use them as braces.           Saving and sharing your document   When you are finished with your document, download the PDF and ZIP files to upload and submit for your lab assignment.    "
+},
+{
+  "id": "math-symbols-3",
+  "level": "2",
+  "url": "math-symbols.html#math-symbols-3",
+  "type": "Objectives",
+  "number": "2",
+  "title": "",
+  "body": "   Include a package in the preamble of a LaTeX document.    Write statements including inline mathematics.    Use the equation environment to present standalone equations.    Use the align environment to show your work as you simplify expressions and solve equations.    "
+},
+{
+  "id": "math-symbols-4-2-1-2-1",
+  "level": "2",
+  "url": "math-symbols.html#math-symbols-4-2-1-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "package "
+},
+{
+  "id": "math-symbols-4-2-1-3-1",
+  "level": "2",
+  "url": "math-symbols.html#math-symbols-4-2-1-3-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "comment "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
