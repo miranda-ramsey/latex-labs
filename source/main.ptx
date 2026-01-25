@@ -11,8 +11,9 @@
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./overleaf-intro.ptx" />
-    <xi:include href="./math-symbols.ptx" />
+    <xi:include href="./sec-overleaf-intro.ptx" />
+    <xi:include href="./sec-math-symbols.ptx" />
+    <xi:include href="./sec-figures-tables.ptx" />
 
     <!-- Include Activities
     <xi:include href="./activities.ptx" />

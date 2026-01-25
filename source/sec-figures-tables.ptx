@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="figures" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Figures</title>
+    <introduction>
+        <p>
+        </p>
+    </introduction>
+    
+    <objectives>
+        <ol>
+            <li>
+                <p>
+                    Upload and include an image in a TeX document.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Use <c>figure</c> and <c>wrapfigure</c> to label and reference important 
+                    information in your document.
+                </p>
+            </li>
+        </ol>
+    </objectives>
+
+    <section>
+        <title>Setting up your project</title>
+        <paragraphs>
+            <ol>
+                <li>
+                    <p>
+                        Begin by creating a new blank project. Navigate to <url href="https://www.overleaf.com/project"/>
+                        and click "New Project" in the top right. Name your project "lastname-lab-3" and
+                        then change the title in the <c>\title{}</c> command like you did in Lab 1.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Let's use the <c>graphicx</c> package! It's already included in your 
+                        Overleaf document. If you aren't using Overleaf, include it at the top. We
+                        will also want the package <c>wrapfig</c>.
+                    </p>
+                    <program line-numbers="yes" language="latex">
+                        \documentclass{article}
+                        \usepackage{graphicx} % Required for inserting images
+                        \usepackage{wrapfig}
+             
+                        \title{Lab 3: Figures}
+                        ...
+                    </program>
+                </li>
+            </ol>
+            <p>
+                Now your project is ready for figures!
+            </p>
+        </paragraphs>
+    </section>
+
+    <section>
+        <title>Including Images</title>
+        <paragraphs>
+            <p>
+                To include an image in your document:
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        First, you'll want to make sure that whatever image you want to include is 
+                        downloaded to and available on your device. You will want to pick a name for your
+                        image that is easy to remember and has no spaces or periods.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        In order to include an image, you need to upload the image file to your project. At
+                        the top left of your Overleaf window, click to expand the <c>File tree</c> and then
+                        click <c>Upload</c>.
+                        <image source="uploadoverleaf.png" />
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Once your image is uploaded, include it in your document using 
+                        <c>\includegraphics{imagename}</c>. The <c>includegraphics</c> command also
+                        uses <term>options</term> which are a kind of input to help <m>\LaTeX</m> know 
+                        what you want to do. Options are placed in square brackets before your 
+                        parameters: <c>\includegraphics[options]{imagename}</c>. Some options 
+                        available to you are written below.
+                    </p>
+                </li>
+            </ol>
+            <p>
+                Choose and upload a few photos to share with me - perhaps a pet you have, a location you
+                like to visit, an object of your affection... Up to you! Create an <c>introduction</c> and 
+                include one of the images.
+            </p>
+            <p>
+                Here are some options you can use. Try each one to see what it does before you decide.
+            </p>
+            <program line-numbers="no" language="latex">
+                \includegraphics{imagename} % No options is a valid choice!
+                \includegraphics[width=\textwidth]{imagename}
+                \includegraphics[width=0.25\textwidth]{imagename}
+                \includegraphics[width=6in, height=1in]{imagename}
+                \includegraphics[scale=0.3]{imagename}
+                \includegraphics[angle=45]{imagename}
+            </program>
+            <p>
+                Note that you may need to adjust these numbers to get results you like, depending
+                on the original size of your image.
+            </p>
+        </paragraphs>
+    </section>
+
+    <section>
+        <title>Figures</title>
+        <paragraphs>
+            <p>
+                While <c>includegraphics</c> can let us put images into our documents, it gives a
+                lot of control up to the compiler. If we want more control over images placement,
+                labeling, and captioning, the <c>figure</c> and <c>wrapfigure</c> environments give
+                us many more options.
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        Create a new section and write a few paragraphs about the subject of your 
+                        photos. You can fill out your text with <url href="https://www.lipsum.com/">Lorem Ipsum</url> 
+                        if you run out of ideas to write and need more text; don't worry, this isn't 
+                        an essay assignment. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Begin a <c>figure</c> environment at the beginning of your text, adding the 
+                        option <c>h</c> for "here" to make sure the compiler doesn't put the figure
+                        somewhere else. Inside the environment, place your <c>includegraphics</c> 
+                            command, as well as a <c>caption</c> and <c>label</c> command.
+                    </p>
+                    <program line-numbers="no" language="latex">
+                        \begin{figure}[h]
+                        \includegraphics{imagename}
+                        \caption{caption}
+                        \label{label}
+                        \end{figure}
+                    </program>
+                </li>
+                <li>
+                    <p>
+                        The <c>caption</c> command places a caption under your figure, which also
+                        induces <m>\LaTeX</m> to include a figure number. The figure number is
+                        automatically generated for your figure. 
+                    </p>
+                    <p>
+                        The <c>label</c> command creates an internal label for your figure that is
+                        not visible in the document, but that you can reference later. 
+                    </p>
+                    <p>
+                        Include a meaningful caption and an easy-to-remember label on your figure.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Find somewhere in your text to include a reference to the image, using the 
+                        command <c>ref</c>. This will call the figure number for you, which is 
+                        convenient in case you later decide to rearrange the order of things:
+                    </p>
+                    <program line-numbers="no" language="latex">
+                        \begin{figure}[h]
+                        \includegraphics{charlie-portrait}
+                        \caption{My Cat Charlie}
+                        \label{fig-charlie}
+                        \end{figure}
+
+                        % Text
+                        As you can see in Figure \ref{fig-charlie}...
+                        % Text
+                    </program>
+                </li>
+            </ol>
+        </paragraphs>
+    </section>
+    <section>
+        <title>Wrapping Figures</title>
+        <paragraphs>
+            <p>
+                The default for <c>figure</c> is to have the figure <term>float</term>, getting its
+                own space in the document. You have some control over where <m>\LaTeX</m> places the
+                float: try <c>h</c> for "here", <c>t</c> for "top", <c>b</c> for "bottom", <c>p</c>
+                for a special "page" of figures. 
+            </p>
+            <p>
+                If you want to have your figure placed within your text, that is called 
+                <term>wrapping</term>. You can use the <c>wrapfigure</c> environment instead for 
+                wrapped figures.
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        Between text paragraphs, begin a <c>wrapfigure</c> environment. Unlike 
+                        <c>figure</c>, we use more {parameters} to control the environment instead
+                        of [options]. 
+                        <aside> 
+                            <p>
+                            Parameters and Options are kind of indistinguishable, and different 
+                            packages will have different choices in terms of whether the inputs are 
+                            in {curly}, [square], or (round) braces. It's a little annoying but you 
+                            get used to it. You should always check with the specific package and 
+                            command you are using to make sure you are formatting your command 
+                            correctly.
+                            </p>
+                        </aside>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The first parameter you will pass in is the alignment: <c>l</c> for "left",
+                        <c>r</c> for "right", and <c>c</c> for "center". The second parameter is for
+                        sizing, and functions the same as the width parameter for <c>includegraphics</c>.
+                        What happens if you have different sizing parameters in both? Try experimenting
+                        with the size parameters to see how they interact. For better control, set 
+                            the size you want in your <c>wrapfigure</c>, then control your <c>includegraphics</c>
+                            with <c>width=\linewidth</c>, which determines the size based on 
+                            the environment the image is in.
+                    </p>
+                    <p>
+                        Choose an alignment and size that looks good for your image and text, then
+                            find somewhere to reference your figure's <c>label</c> within your text.
+                        </p>
+                    <program line-numbers="no" language="latex">
+                        % Text
+
+                        \begin{wrapfigure}{l}{0.4\textwidth}
+                        \includegraphics[width=\linewidth]{charlie-portrait}
+                        \caption{My Cat Charlie}
+                        \label{fig-charlie}
+                        \end{wrapfigure}
+
+                        % Text
+                        As you can see in Figure \ref{fig-charlie}...
+                        % Text
+                    </program>
+                </li>
+            </ol>
+        </paragraphs>
+    </section>
+
+    <section>
+        <title>Saving and sharing your document</title>
+        <paragraphs>
+            <p>
+                When you are finished with your document, download the PDF and ZIP files to upload
+                and submit for your lab assignment. 
+            </p>
+        </paragraphs>
+    </section>
+</chapter>
