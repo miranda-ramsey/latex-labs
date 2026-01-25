@@ -13,7 +13,7 @@
     <!-- Include chapters -->
     <xi:include href="./sec-overleaf-intro.ptx" />
     <xi:include href="./sec-math-symbols.ptx" />
-    <xi:include href="./sec-figures-tables.ptx" />
+    <xi:include href="./sec-figures.ptx" />
 
     <!-- Include Activities
     <xi:include href="./activities.ptx" />

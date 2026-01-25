@@ -100,6 +100,51 @@ var ptx_lunr_docs = [
   "body": "comment "
 },
 {
+  "id": "figures",
+  "level": "1",
+  "url": "figures.html",
+  "type": "Lab",
+  "number": "3",
+  "title": "Figures",
+  "body": " Figures         Upload and include an image in a TeX document.    Use figure and wrapfigure to label and reference important information in your document.      Setting up your project     Begin by creating a new blank project. Navigate to and click \"New Project\" in the top right. Name your project \"lastname-lab-3\" and then change the title in the \\title{} command like you did in Lab 1.    Let's use the graphicx package! It's already included in your Overleaf document. If you aren't using Overleaf, include it at the top. We will also want the package wrapfig .  \\documentclass{article} \\usepackage{graphicx} % Required for inserting images \\usepackage{wrapfig} \\title{Lab 3: Figures} ...    Now your project is ready for figures!     Including Images   To include an image in your document:    First, you'll want to make sure that whatever image you want to include is downloaded to and available on your device. You will want to pick a name for your image that is easy to remember and has no spaces or periods.    In order to include an image, you need to upload the image file to your project. At the top left of your Overleaf window, click to expand the File tree and then click Upload .     Once your image is uploaded, include it in your document using \\includegraphics{imagename} . The includegraphics command also uses options which are a kind of input to help know what you want to do. Options are placed in square brackets before your parameters: \\includegraphics[options]{imagename} . Some options available to you are written below.    Choose and upload a few photos to share with me - perhaps a pet you have, a location you like to visit, an object of your affection... Up to you! Create an introduction and include one of the images.  Here are some options you can use. Try each one to see what it does before you decide.  \\includegraphics{imagename} % No options is a valid choice! \\includegraphics[width=\\textwidth]{imagename} \\includegraphics[width=0.25\\textwidth]{imagename} \\includegraphics[width=6in, height=1in]{imagename} \\includegraphics[scale=0.3]{imagename} \\includegraphics[angle=45]{imagename}  Note that you may need to adjust these numbers to get results you like, depending on the original size of your image.     Figures   While includegraphics can let us put images into our documents, it gives a lot of control up to the compiler. If we want more control over images placement, labeling, and captioning, the figure and wrapfigure environments give us many more options.    Create a new section and write a few paragraphs about the subject of your photos. You can fill out your text with Lorem Ipsum if you run out of ideas to write and need more text; don't worry, this isn't an essay assignment.    Begin a figure environment at the beginning of your text, adding the option h for \"here\" to make sure the compiler doesn't put the figure somewhere else. Inside the environment, place your includegraphics command, as well as a caption and label command.  \\begin{figure}[h] \\includegraphics{imagename} \\caption{caption} \\label{label} \\end{figure}    The caption command places a caption under your figure, which also induces to include a figure number. The figure number is automatically generated for your figure.  The label command creates an internal label for your figure that is not visible in the document, but that you can reference later.  Include a meaningful caption and an easy-to-remember label on your figure.    Find somewhere in your text to include a reference to the image, using the command ref . This will call the figure number for you, which is convenient in case you later decide to rearrange the order of things:  \\begin{figure}[h] \\includegraphics{charlie-portrait} \\caption{My Cat Charlie} \\label{fig-charlie} \\end{figure} % Text As you can see in Figure \\ref{fig-charlie}... % Text       Wrapping Figures   The default for figure is to have the figure float , getting its own space in the document. You have some control over where places the float: try h for \"here\", t for \"top\", b for \"bottom\", p for a special \"page\" of figures.  If you want to have your figure placed within your text, that is called wrapping . You can use the wrapfigure environment instead for wrapped figures.    Between text paragraphs, begin a wrapfigure environment. Unlike figure , we use more {parameters} to control the environment instead of [options].  Parameters and Options are kind of indistinguishable, and different packages will have different choices in terms of whether the inputs are in {curly}, [square], or (round) braces. It's a little annoying but you get used to it. You should always check with the specific package and command you are using to make sure you are formatting your command correctly.      The first parameter you will pass in is the alignment: l for \"left\", r for \"right\", and c for \"center\". The second parameter is for sizing, and functions the same as the width parameter for includegraphics . What happens if you have different sizing parameters in both? Try experimenting with the size parameters to see how they interact. For better control, set the size you want in your wrapfigure , then control your includegraphics with width=\\linewidth , which determines the size based on the environment the image is in.  Choose an alignment and size that looks good for your image and text, then find somewhere to reference your figure's label within your text.  % Text \\begin{wrapfigure}{l}{0.4\\textwidth} \\includegraphics[width=\\linewidth]{charlie-portrait} \\caption{My Cat Charlie} \\label{fig-charlie} \\end{wrapfigure} % Text As you can see in Figure \\ref{fig-charlie}... % Text       Saving and sharing your document   When you are finished with your document, download the PDF and ZIP files to upload and submit for your lab assignment.    "
+},
+{
+  "id": "figures-3",
+  "level": "2",
+  "url": "figures.html#figures-3",
+  "type": "Objectives",
+  "number": "3",
+  "title": "",
+  "body": "   Upload and include an image in a TeX document.    Use figure and wrapfigure to label and reference important information in your document.    "
+},
+{
+  "id": "figures-5-2-2-3-1",
+  "level": "2",
+  "url": "figures.html#figures-5-2-2-3-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "options "
+},
+{
+  "id": "figures-7-2-1",
+  "level": "2",
+  "url": "figures.html#figures-7-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "float "
+},
+{
+  "id": "figures-7-2-2",
+  "level": "2",
+  "url": "figures.html#figures-7-2-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "wrapping "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
