@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="math-symbols" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Graphics with Tikz</title>
-    <!--
+<chapter xml:id="tikz-graphics" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>TikZ Playground</title>
     <introduction>
         <p>
+            With this lab, we will begin to explore the broad utility of the TikZ package for
+            creating figures, diagrams, and graphs within your document.
         </p>
     </introduction>
     
@@ -12,23 +13,7 @@
         <ol>
             <li>
                 <p>
-                    Explore the TikZ package
-                </p>
-            </li>
-            <li>
-                <p>
-                    Write statements including inline mathematics.
-                </p>
-            </li>
-            <li>
-                <p>
-                    Use the equation environment to present standalone equations.
-                </p>
-            </li>
-            <li>
-                <p>
-                    Use the align environment to show your work as you simplify expressions and 
-                    solve equations.
+                    Explore the TikZ package.
                 </p>
             </li>
         </ol>
@@ -41,44 +26,23 @@
                 <li>
                     <p>
                         Begin by creating a new blank project. Navigate to <url href="https://www.overleaf.com/project"/>
-                        and click "New Project" in the top right. Name your project "lastname-lab-2" and
+                        and click "New Project" in the top right. Name your project "lastname-lab-4" and
                         then change the title in the <c>\title{}</c> command like you did in Lab 1.
                     </p>
                 </li>
                 <li>
                     <p>
-                        In order to use math language we want to include a <term>package</term>. LaTeX is a 
-                        flexible tool that allows for all sorts of typesetting options with countless 
-                        commands, and if your file included the code to use all of them, it would be very 
-                        large. Instead, the code to compile different kinds of LaTeX features are stored in 
-                        different packages, and you can pick the package you want. In this case, Overleaf
-                        automatically includes the <c>graphicx</c> package on line 2. 
+                        We want to include the <c>tikz</c> package, which lets us use the 
+                        <c>tikzpicture</c> environment. Include any other packages you want to 
+                        for your document.
                     </p>
                     <program line-numbers="yes" language="latex">
                         \documentclass{article}
-                        \usepackage{graphicx} % Required for inserting images
+                        \usepackage{tikz}
              
-                        \title{Lab 2: Math and Symbols}
+                        \title{Lab 4: TikZ Playground}
                         ...
                     </program>
-                    <p> 
-                        We don't need the graphicx package, but we do need the <c>amsmath</c> package. This
-                        is a package created by the American Math Society that adds extra math commands to 
-                        your LaTeX file. To use the <c>amsmath</c> package, simply substitute <c>amsmath</c> 
-                        into the usepackage parameter instead of <c>graphicx</c>.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        The % symbol after the command starts a <term>comment</term>. This is text that does
-                        not get compiled. On any line, anything after a % will be ignored, so you can leave
-                        yourself little messages and explanations. 
-                    </p>
-                    <p>
-                        The comment that is there is for the graphicx package and you don't need it. Put a 
-                        different comment there that is relevant to you, explaining why you are including 
-                        <c>amsmath</c>.
-                    </p>
                 </li>
             </ol>
             <p>
@@ -88,246 +52,125 @@
     </section>
 
     <section>
-        <title>Writing inline mathematics with <c>$...$</c></title>
+        <title>Basic shapes</title>
         <paragraphs>
             <p>
-                By "inline", we mean the math that appears in the middle of normal text, like if I
-                wanted to discuss <m>f(x)</m> or tell you that a quadratic equation has the form
-                <m>y = x^2 + bx + c</m>. 
-            </p>
-            <p>
-                To start, change the name of your Introduction section to "The Pythagorean Theorem". 
-                Write a paragraph in this section describing what you know about the Pythagorean 
-                Theorem, including what the letters stand for and what the equation is. To get the 
-                nice math font to display, place dollar signs around the math. For instance, $f(x) 
-                = x^2 + 2$ will be compiled to <m>f(x) = x^2 + 2</m>.
-            </p> 
-            <p>
-                The dollar signs offer a quick way to begin and end an "inline math" environment, 
-                without a traditional backslash command.
-            </p>
-        </paragraphs>
-    </section>
+                The <c>tikzpicture</c> environment creates a visual space where you can draw
+                objects by inputting coordinates and commands. We will start with the <c>draw</c>
+                command. Each drawing needs to end with a semicolon (;).
+                <program line-numbers="no" language="latex">
+                    \begin{tikzpicture}
 
-    <section>
-        <title>Displaying math with <c>equation</c></title>
-        <paragraphs>
-            <p>
-                Sometimes an equation is really important and we want to prominently display it in 
-                the center of the page. For this we will use the <c>equation</c> environment which 
-                displays math like this:
-                <me>a^2 + b^2 = c^2</me>
-                We will use the Quadratic Formula to demonstrate this environment.
+                    \draw ... ;
+                    \draw ... ;
+                    ...
+
+                    \end{tikzpicture}
+                </program>
             </p>
-            <ol>
-                <li>
-                    <p>
-                        Create a new section titled "The Quadratic Formula". Introduce the formula by first
-                        explaining that it provides solutions to equations of the form
-                        <me>ax^2 + bx + c = 0.</me>
-                        To display the equation this way, include the following code:
+            <p>
+                Use the following explanations and examples to play with different shapes in a tikz
+                environment.
+                <dl>
+                    <li>
+                        <title>Lines</title>
+                        <p>
+                            Lines are drawn by listing the coordinates of endpoints with <c>--</c> 
+                            between them. You can chain lines together when they share endpoints.
+                        </p>
                         <program line-numbers="no" language="latex">
-                            \begin{equation*}
-                                ax^2 + bx + c = 0
-                            \end{equation*}
+                            \draw (0,0) -- (2,0);
+                            \draw (1,1) -- (2,-1) -- (-1,-1);
+                            \draw[very thick, blue] (0,0) -- (-1,-1); % Lots of parameters work in [square brackets]
                         </program>
-                        Note the following:
-                        <ul>
-                            <li>
-                                <p>
-                                    The environment has a <c>\begin{}</c> and <c>\end{}</c> command
-                                    with <c>equation*</c> passed as a parameter. 
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    The parameter includes a *. If you remove the *, it labels the 
-                                    equation with a number that you can reference later (think about
-                                    how often you see this in textbooks!). I chose to have a * here
-                                    to suppress the number; it's up to you if you want to include 
-                                    it.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    The equation inside does not need dollar sign $...$ tags.
-                                </p>
-                            </li>
-                        </ul>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Explain how the quadratic formula is used, in your own words. Use inline
-                        mathematics when appropriate to talk about variables. When you are ready to
-                        state the formula, you want it to look like this:
-                        <me>x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</me>
-                        In addition to the <c>\begin{equation*}...\end{equation*}</c> tags, you will
-                        need the following commands:
-                        <ul>
-                            <li>
-                                <p>
-                                    <c>\frac{}{}</c> creates a fraction. The first parameter becomes
-                                    the numerator, the second becomes the denominator. For example,
-                                    <c>\frac{x+1}{2}</c> becomes <m>\dfrac{x+1}{2}</m>.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <c>\pm</c> proves the "plus or minus" <m>\pm</m> symbol.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <c>\sqrt{}</c> creates a square root <m>\sqrt{\text{radical}}</m>
-                                    symbol. For example, <c>\sqrt{x^2 + 2x + 1}</c> becomes
-                                    <m>\sqrt{x^2 + 2x + 1}</m>.
-                                </p>
-                            </li>
-                        </ul>
-                    </p>
-                </li>
-            </ol>
+                    </li>
+                    <li>
+                        <title>Circles</title>
+                        <p>
+                            Circles are drawn by first writing the coordinates of the center of the
+                            circle, followed by <c>circle</c>, then the radius length in parentheses.
+                        </p>
+                        <program line-numbers="no" language="latex">
+                            \draw (0,0) circle (3);
+                            \draw (3,3) circle (1);
+                            \fill (0,0) circle (1cm); % fill works like draw, but fills instead
+                        </program>
+                    </li>
+                    <li>
+                        <title>Ellipses</title>
+                        <p>
+                            Ellipses are like circles but take in two radii.
+                        </p>
+                        <program line-numbers="no" language="latex">
+                            \draw (0,0) ellipse (1 and 2);
+                            \draw (3,3) ellipse (3 and 1);
+                            \filldraw[color=red, fill=blue] (-2, 2) ellipse (0.5, 4); 
+                            % filldraw does both, with the ability to control them separately!
+                        </program>
+                    </li>
+                    <li>
+                        <title>Arcs</title>
+                        <p>
+                            Arcs can be drawn by specifying the start point, angles, and radius. 
+                            Note that the arc is not like the circle; the start point is not the
+                            center of the arc. 
+                        </p>
+                        <program line-numbers="no" language="latex">
+                            \draw (0,0) arc (0:90:1); % start at 0 degrees, arc to 90 degrees, with a radius of 1
+                            \draw (0,0) arc (90:0:1); % start at 90 degrees, arc to 0 degrees, with a radius of 1
+                            \draw[->] (2,2) arc (90:270:1); % the -> parameter adds an arrow to the end. 
+                        </program>
+                    </li>
+                    <li>
+                        <title>Rectangles</title>
+                        <p>
+                            Rectangles can be drawn using two opposite corners.
+                        </p>
+                        <program line-numbers="no" language="latex">
+                            \draw (0,0) rectangle (1,2); 
+                            \filldraw[ultra thick, color=red, fill=red!50] (0,0) rectangle (-1,2); 
+                            % The parameter !%% lets you add a percentage opacity!
+                        </program>
+                    </li>
+                </dl>
+                I can't list every combination of features here, but options for colors include 
+                white, black, red, green, blue, cyan, magenta, yellow; and thickness options include
+                ultra thin, very thin, thin, thick, very thick, and ultra thick.
+            </p>
+        </paragraphs>
+    </section>
+    <section>
+        <title>Your drawings</title>
+        <paragraphs>
+            <p>
+                Create a drawing using TiKZ, with at least three shapes. Use <c>draw</c>, <c>fill</c>,
+                and <c>filldraw</c> at least once each, and use a few different colors and
+                opacities.
+            </p>
+            <p>
+                Then, in a separate <c>tikzpicture</c> environment, try to replicate this visual proof of the
+                pythagorean theorem. You can use different colors and other choices.
+            </p>
+                    <image width="60%">
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \filldraw[thick, fill=yellow!50] (0,0) rectangle (3,3);
+                                \filldraw[thick, fill=red!50] (0,2) -- (2,2) -- (0,3) -- (0,2);
+                                \filldraw[thick, fill=red!50] (2,0) -- (3,2) -- (3,0) -- (2,0);
+                                \filldraw[thick, fill=blue!50] (2,0) -- (2,2) -- (3,2) -- (2,0);
+                                \filldraw[thick, fill=blue!50] (0,3) -- (2,3) -- (2,2) -- (0,3);
+
+                                \filldraw[thick, fill=yellow!50] (4,0) rectangle (7,3);
+                                \filldraw[thick, fill=red!50] (4,0) -- (6,0) -- (4,1) -- (4,0);
+                                \filldraw[thick, fill=red!50] (6,0) -- (7,0) -- (7,2) -- (6,0);
+                                \filldraw[thick, fill=blue!50] (4,1) -- (4,3) -- (5,3) -- (4,1);
+                                \filldraw[thick, fill=blue!50] (5,3) -- (7,3) -- (7,2) -- (5,3);
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
         </paragraphs>
     </section>
 
-    <section>
-        <title>Aligning mathematics with <c>align</c></title>
-        <paragraphs>
-            <p>
-                When evaluating expressions or solving equations, we like to have the equals signs
-                vertically aligned. If you just write each line as a separate <c>equation</c>, you
-                won't get good results. For example:
-                <program line-numbers="no" language="latex">
-                    \begin{equation*}
-                    (x + 1)(x + 2) = x^2 + x + 2x + 2
-                    \end{equation*}
-                    \begin{equation*}
-                    = x^2 + 3x + 2
-                    \end{equation*}
-                </program>
-                will display as
-                <me>
-                    (x + 1)(x + 2) = x^2 + x + 2x + 2
-                </me>
-                <me>
-                    = x^2 + 3x + 2
-                </me>
-            </p>
-            <p>
-                What we actually want will look more like this:
-                <md>
-                    <mrow>
-                        (x + 1)(x + 2) &amp;= x^2 + x + 2x + 2
-                    </mrow>
-                    <mrow>
-                        &amp;= x^2 + 3x + 2
-                    </mrow>
-                </md>
-                To accomplish this, we use the <c>align</c> environment.
-                <program line-numbers="no" language="latex">
-                    \begin{align*}
-                    (x + 1)(x + 2) &amp;= x^2 + x + 2x + 2\\
-                    &amp;= x^2 + 3x + 2
-                    \end{equation*}
-                </program>
-                Note the following:
-                <ul>
-                    <li>
-                        <p>
-                            The environment has a <c>\begin{}</c> and <c>\end{}</c> command
-                            with <c>align*</c> passed as a parameter. 
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            The line is ended with a double backslash (see Lab 1).
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            The alignment is controlled by an ampersand sign &amp;. Wherever you 
-                            place this on each line will determine how LaTeX aligns the lines
-                            vertically.
-                        </p>
-                    </li>
-                </ul>
-            </p>
-            <aside>
-                <p>
-                    You can include more than one &amp; on each line, but the results may be hard
-                    to predict with your intuition. Try it out and see what you get! Each line 
-                    should have the same number of &amp; signs.
-                </p>
-            </aside>
-            <p>
-                Now to apply this in your document.
-                <ol>
-                    <li>
-                        <p>
-                            Create a new section titled "Expressions and Equations". In this section,
-                            replicate the following:
-                            <md>
-                                <mrow>
-                                    \frac{x^2 - 4}{x - 2} &amp;= \frac{(x + 2)(x-2)}{x-2}
-                                </mrow>
-                                <mrow>
-                                    &amp; = x+2, x \neq 2 
-                                </mrow>
-                            </md>
-                            In addition to the <c>\begin{align*}...\end{align*}</c> tags, you will
-                            need the following commands:
-                            <ul>
-                                <li>
-                                    <p>
-                                        <c>\neq</c> creates the "not equal" <m>\neq</m> sign.
-                                    </p>
-                                </li>
-                            </ul>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Create a new section titled "Expressions and Equations". In this section,
-                            replicate the following:
-                            <md>
-                                <mrow>
-                                    x^2 - 7x + 7 &amp;= -5 
-                                </mrow>
-                                <mrow>
-                                    x^2 - 7x + 12 &amp;= 0
-                                </mrow>
-                                <mrow>
-                                    (x-3)(x-4) &amp;= 0
-                                </mrow>
-                                <mrow>
-                                    x &amp;\notin \{3, 4\}
-                                </mrow>
-                            </md>
-                            In addition to the <c>\begin{align*}...\end{align*}</c> tags, you will
-                            need the following commands:
-                            <ul>
-                                <li>
-                                    <p>
-                                        <c>\notin</c> creates the "not in" <m>\notin</m> sign.
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <c>\{ ... \}</c> to create curly braces in your math. 
-                                        Since curly braces are so common in LaTeX, the compiler gets
-                                        confused if you use them on their own. The backslashes tell
-                                        the compiler that you intend to use them as braces.
-                                    </p>
-                                </li>
-                            </ul>
-                        </p>
-                    </li>
-                </ol>
-            </p>
-        </paragraphs>
-    </section>
-    -->
     <section>
         <title>Saving and sharing your document</title>
         <paragraphs>

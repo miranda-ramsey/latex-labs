@@ -14,6 +14,7 @@
     <xi:include href="./sec-overleaf-intro.ptx" />
     <xi:include href="./sec-math-symbols.ptx" />
     <xi:include href="./sec-figures.ptx" />
+    <xi:include href="./sec-tikz-graphics.ptx" />
 
     <!-- Include Activities
     <xi:include href="./activities.ptx" />
