@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Figures</title>
+<title>TikZ Playground</title>
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -124,7 +124,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="math-symbols.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="latex-labs.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="tikz-graphics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="figures.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="latex-labs.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -158,9 +158,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="math-symbols.html#math-symbols-8" class="internal"><span class="codenumber">2.5</span> <span class="title">Saving and sharing your document</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="figures.html" class="internal"><span class="codenumber">3</span> <span class="title">Figures</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="figures.html#figures-4" class="internal"><span class="codenumber">3.1</span> <span class="title">Setting up your project</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="figures.html#figures-5" class="internal"><span class="codenumber">3.2</span> <span class="title">Including Images</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="figures.html#figures-6" class="internal"><span class="codenumber">3.3</span> <span class="title">Figures</span></a></div></li>
@@ -168,9 +168,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="figures.html#figures-8" class="internal"><span class="codenumber">3.5</span> <span class="title">Saving and sharing your document</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="tikz-graphics.html" class="internal"><span class="codenumber">4</span> <span class="title">TikZ Playground</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="tikz-graphics.html#tikz-graphics-4" class="internal"><span class="codenumber">4.1</span> <span class="title">Setting up your project</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="tikz-graphics.html#tikz-graphics-5" class="internal"><span class="codenumber">4.2</span> <span class="title">Basic shapes</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="tikz-graphics.html#tikz-graphics-6" class="internal"><span class="codenumber">4.3</span> <span class="title">Your drawings</span></a></div></li>
@@ -179,111 +179,94 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="chapter" id="figures"><h2 class="heading">
-<span class="type">Lab</span><span class="space"> </span><span class="codenumber">3</span><span class="space"> </span><span class="title">Figures</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="chapter" id="tikz-graphics"><h2 class="heading">
+<span class="type">Lab</span><span class="space"> </span><span class="codenumber">4</span><span class="space"> </span><span class="title">TikZ Playground</span>
 </h2>
-<section class="introduction" id="figures-2"><div class="para" id="figures-2-1"></div></section><article class="objectives goal-like" id="figures-3"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ol class="decimal" id="figures-3-1">
-<li id="figures-3-1-1"><div class="para" id="figures-3-1-1-1">Upload and include an image in a TeX document.</div></li>
-<li id="figures-3-1-2"><div class="para" id="figures-3-1-2-1">Use <code class="code-inline tex2jax_ignore">figure</code> and <code class="code-inline tex2jax_ignore">wrapfigure</code> to label and reference important information in your document.</div></li>
-</ol></article><section class="section" id="figures-4"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Setting up your project</span>
+<section class="introduction" id="tikz-graphics-2"><div class="para" id="tikz-graphics-2-1">With this lab, we will begin to explore the broad utility of the TikZ package for creating figures, diagrams, and graphs within your document.</div></section><article class="objectives goal-like" id="tikz-graphics-3"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ol class="decimal" id="tikz-graphics-3-1"><li id="tikz-graphics-3-1-1"><div class="para" id="tikz-graphics-3-1-1-1">Explore the TikZ package.</div></li></ol></article><section class="section" id="tikz-graphics-4"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.1</span><span class="space"> </span><span class="title">Setting up your project</span>
 </h3>
-<section class="paragraphs" id="figures-4-2"><ol class="decimal" id="figures-4-2-1">
-<li id="figures-4-2-1-1"><div class="para" id="figures-4-2-1-1-1">Begin by creating a new blank project. Navigate to <a class="external" href="https://www.overleaf.com/project" target="_blank"><code class="code-inline tex2jax_ignore">https://www.overleaf.com/project</code></a> and click "New Project" in the top right. Name your project "lastname-lab-3" and then change the title in the <code class="code-inline tex2jax_ignore">\title{}</code> command like you did in Lab 1.</div></li>
-<li id="figures-4-2-1-2">
-<div class="para" id="figures-4-2-1-2-1">Let’s use the <code class="code-inline tex2jax_ignore">graphicx</code> package! It’s already included in your Overleaf document. If you aren’t using Overleaf, include it at the top. We will also want the package <code class="code-inline tex2jax_ignore">wrapfig</code>.</div>
+<section class="paragraphs" id="tikz-graphics-4-2"><ol class="decimal" id="tikz-graphics-4-2-1">
+<li id="tikz-graphics-4-2-1-1"><div class="para" id="tikz-graphics-4-2-1-1-1">Begin by creating a new blank project. Navigate to <a class="external" href="https://www.overleaf.com/project" target="_blank"><code class="code-inline tex2jax_ignore">https://www.overleaf.com/project</code></a> and click "New Project" in the top right. Name your project "lastname-lab-4" and then change the title in the <code class="code-inline tex2jax_ignore">\title{}</code> command like you did in Lab 1.</div></li>
+<li id="tikz-graphics-4-2-1-2">
+<div class="para" id="tikz-graphics-4-2-1-2-1">We want to include the <code class="code-inline tex2jax_ignore">tikz</code> package, which lets us use the <code class="code-inline tex2jax_ignore">tikzpicture</code> environment. Include any other packages you want to for your document.</div>
 <div class="code-box"><pre class="program line-numbers"><code class="language-latex">           \documentclass{article}
-           \usepackage{graphicx} % Required for inserting images
-           \usepackage{wrapfig}
+           \usepackage{tikz}
 
-           \title{Lab 3: Figures}
+           \title{Lab 4: TikZ Playground}
            ...
 </code></pre></div>
 </li>
 </ol>
-<div class="para" id="figures-4-2-2">Now your project is ready for figures!</div></section></section><section class="section" id="figures-5"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Including Images</span>
+<div class="para" id="tikz-graphics-4-2-2">Now your project is ready for math!</div></section></section><section class="section" id="tikz-graphics-5"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.2</span><span class="space"> </span><span class="title">Basic shapes</span>
 </h3>
-<section class="paragraphs" id="figures-5-2"><div class="para" id="figures-5-2-1">To include an image in your document:</div>
-<ol class="decimal" id="figures-5-2-2">
-<li id="figures-5-2-2-1"><div class="para" id="figures-5-2-2-1-1">First, you’ll want to make sure that whatever image you want to include is downloaded to and available on your device. You will want to pick a name for your image that is easy to remember and has no spaces or periods.</div></li>
-<li id="figures-5-2-2-2"><div class="para" id="figures-5-2-2-2-1">In order to include an image, you need to upload the image file to your project. At the top left of your Overleaf window, click to expand the <code class="code-inline tex2jax_ignore">File tree</code> and then click <code class="code-inline tex2jax_ignore">Upload</code>. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/uploadoverleaf.png" class="contained"></div>
-</div></li>
-<li id="figures-5-2-2-3"><div class="para" id="figures-5-2-2-3-1">Once your image is uploaded, include it in your document using <code class="code-inline tex2jax_ignore">\includegraphics{imagename}</code>. The <code class="code-inline tex2jax_ignore">includegraphics</code> command also uses <dfn class="terminology">options</dfn> which are a kind of input to help <span class="process-math">\(\LaTeX\)</span> know what you want to do. Options are placed in square brackets before your parameters: <code class="code-inline tex2jax_ignore">\includegraphics[options]{imagename}</code>. Some options available to you are written below.</div></li>
-</ol>
-<div class="para" id="figures-5-2-3">Choose and upload a few photos to share with me - perhaps a pet you have, a location you like to visit, an object of your affection... Up to you! Create an <code class="code-inline tex2jax_ignore">introduction</code> and include one of the images.</div>
-<div class="para" id="figures-5-2-4">Here are some options you can use. Try each one to see what it does before you decide.</div>
-<div class="code-box"><pre class="program"><code class="language-latex">\includegraphics{imagename} % No options is a valid choice!
-\includegraphics[width=\textwidth]{imagename}
-\includegraphics[width=0.25\textwidth]{imagename}
-\includegraphics[width=6in, height=1in]{imagename}
-\includegraphics[scale=0.3]{imagename}
-\includegraphics[angle=45]{imagename}
-</code></pre></div>
-<div class="para" id="figures-5-2-6">Note that you may need to adjust these numbers to get results you like, depending on the original size of your image.</div></section></section><section class="section" id="figures-6"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.3</span><span class="space"> </span><span class="title">Figures</span>
-</h3>
-<section class="paragraphs" id="figures-6-2"><div class="para" id="figures-6-2-1">While <code class="code-inline tex2jax_ignore">includegraphics</code> can let us put images into our documents, it gives a lot of control up to the compiler. If we want more control over images placement, labeling, and captioning, the <code class="code-inline tex2jax_ignore">figure</code> and <code class="code-inline tex2jax_ignore">wrapfigure</code> environments give us many more options.</div>
-<ol class="decimal" id="figures-6-2-2">
-<li id="figures-6-2-2-1"><div class="para" id="figures-6-2-2-1-1">Create a new section and write a few paragraphs about the subject of your photos. You can fill out your text with <a class="external" href="https://www.lipsum.com/" target="_blank">Lorem Ipsum</a><details class="ptx-footnote" aria-live="polite" id="figures-6-2-2-1-1-2"><summary class="ptx-footnote__number" title="Footnote 3.3.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="figures-6-2-2-1-1-2"><code class="code-inline tex2jax_ignore">www.lipsum.com/</code></div></details> if you run out of ideas to write and need more text; don’t worry, this isn’t an essay assignment.</div></li>
-<li id="figures-6-2-2-2">
-<div class="para" id="figures-6-2-2-2-1">Begin a <code class="code-inline tex2jax_ignore">figure</code> environment at the beginning of your text, adding the option <code class="code-inline tex2jax_ignore">h</code> for "here" to make sure the compiler doesn’t put the figure somewhere else. Inside the environment, place your <code class="code-inline tex2jax_ignore">includegraphics</code> command, as well as a <code class="code-inline tex2jax_ignore">caption</code> and <code class="code-inline tex2jax_ignore">label</code> command.</div>
-<div class="code-box"><pre class="program"><code class="language-latex">\begin{figure}[h]
-\includegraphics{imagename}
-\caption{caption}
-\label{label}
-\end{figure}
-</code></pre></div>
-</li>
-<li id="figures-6-2-2-3">
-<div class="para" id="figures-6-2-2-3-1">The <code class="code-inline tex2jax_ignore">caption</code> command places a caption under your figure, which also induces <span class="process-math">\(\LaTeX\)</span> to include a figure number. The figure number is automatically generated for your figure.</div>
-<div class="para" id="figures-6-2-2-3-2">The <code class="code-inline tex2jax_ignore">label</code> command creates an internal label for your figure that is not visible in the document, but that you can reference later.</div>
-<div class="para" id="figures-6-2-2-3-3">Include a meaningful caption and an easy-to-remember label on your figure.</div>
-</li>
-<li id="figures-6-2-2-4">
-<div class="para" id="figures-6-2-2-4-1">Find somewhere in your text to include a reference to the image, using the command <code class="code-inline tex2jax_ignore">ref</code>. This will call the figure number for you, which is convenient in case you later decide to rearrange the order of things:</div>
-<div class="code-box"><pre class="program"><code class="language-latex">\begin{figure}[h]
-\includegraphics{charlie-portrait}
-\caption{My Cat Charlie}
-\label{fig-charlie}
-\end{figure}
+<section class="paragraphs" id="tikz-graphics-5-2"><div class="para" id="tikz-graphics-5-2-1">The <code class="code-inline tex2jax_ignore">tikzpicture</code> environment creates a visual space where you can draw objects by inputting coordinates and commands. We will start with the <code class="code-inline tex2jax_ignore">draw</code> command. Each drawing needs to end with a semicolon (;). <div class="code-box"><pre class="program"><code class="language-latex">\begin{tikzpicture}
 
-% Text
-As you can see in Figure \ref{fig-charlie}...
-% Text
-</code></pre></div>
-</li>
-</ol></section></section><section class="section" id="figures-7"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Wrapping Figures</span>
-</h3>
-<section class="paragraphs" id="figures-7-2"><div class="para" id="figures-7-2-1">The default for <code class="code-inline tex2jax_ignore">figure</code> is to have the figure <dfn class="terminology">float</dfn>, getting its own space in the document. You have some control over where <span class="process-math">\(\LaTeX\)</span> places the float: try <code class="code-inline tex2jax_ignore">h</code> for "here", <code class="code-inline tex2jax_ignore">t</code> for "top", <code class="code-inline tex2jax_ignore">b</code> for "bottom", <code class="code-inline tex2jax_ignore">p</code> for a special "page" of figures.</div>
-<div class="para" id="figures-7-2-2">If you want to have your figure placed within your text, that is called <dfn class="terminology">wrapping</dfn>. You can use the <code class="code-inline tex2jax_ignore">wrapfigure</code> environment instead for wrapped figures.</div>
-<ol class="decimal" id="figures-7-2-3">
-<li id="figures-7-2-3-1"><div class="para" id="figures-7-2-3-1-1">Between text paragraphs, begin a <code class="code-inline tex2jax_ignore">wrapfigure</code> environment. Unlike <code class="code-inline tex2jax_ignore">figure</code>, we use more {parameters} to control the environment instead of [options]. <aside class="aside aside-like" id="figures-7-2-3-1-1-3"><div class="para" id="figures-7-2-3-1-1-3-1">Parameters and Options are kind of indistinguishable, and different packages will have different choices in terms of whether the inputs are in {curly}, [square], or (round) braces. It’s a little annoying but you get used to it. You should always check with the specific package and command you are using to make sure you are formatting your command correctly.</div></aside>
-</div></li>
-<li id="figures-7-2-3-2">
-<div class="para" id="figures-7-2-3-2-1">The first parameter you will pass in is the alignment: <code class="code-inline tex2jax_ignore">l</code> for "left", <code class="code-inline tex2jax_ignore">r</code> for "right", and <code class="code-inline tex2jax_ignore">c</code> for "center". The second parameter is for sizing, and functions the same as the width parameter for <code class="code-inline tex2jax_ignore">includegraphics</code>. What happens if you have different sizing parameters in both? Try experimenting with the size parameters to see how they interact. For better control, set the size you want in your <code class="code-inline tex2jax_ignore">wrapfigure</code>, then control your <code class="code-inline tex2jax_ignore">includegraphics</code> with <code class="code-inline tex2jax_ignore">width=\linewidth</code>, which determines the size based on the environment the image is in.</div>
-<div class="para" id="figures-7-2-3-2-2">Choose an alignment and size that looks good for your image and text, then find somewhere to reference your figure’s <code class="code-inline tex2jax_ignore">label</code> within your text.</div>
-<div class="code-box"><pre class="program"><code class="language-latex">% Text
+\draw ... ;
+\draw ... ;
+...
 
-\begin{wrapfigure}{l}{0.4\textwidth}
-\includegraphics[width=\linewidth]{charlie-portrait}
-\caption{My Cat Charlie}
-\label{fig-charlie}
-\end{wrapfigure}
-
-% Text
-As you can see in Figure \ref{fig-charlie}...
-% Text
+\end{tikzpicture}
 </code></pre></div>
-</li>
-</ol></section></section><section class="section" id="figures-8"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Saving and sharing your document</span>
+</div>
+<div class="para logical" id="tikz-graphics-5-2-2">
+<div class="para">Use the following explanations and examples to play with different shapes in a tikz environment.</div>
+<dl class="description-list">
+<dt id="tikz-graphics-5-2-2-1-1">Lines</dt>
+<dd>
+<div class="para" id="tikz-graphics-5-2-2-1-1-2">Lines are drawn by listing the coordinates of endpoints with <code class="code-inline tex2jax_ignore">--</code> between them. You can chain lines together when they share endpoints.</div>
+<div class="code-box"><pre class="program"><code class="language-latex">\draw (0,0) -- (2,0);
+\draw (1,1) -- (2,-1) -- (-1,-1);
+\draw[very thick, blue] (0,0) -- (-1,-1); % Lots of parameters work in [square brackets]
+</code></pre></div>
+</dd>
+<dt id="tikz-graphics-5-2-2-1-2">Circles</dt>
+<dd>
+<div class="para" id="tikz-graphics-5-2-2-1-2-2">Circles are drawn by first writing the coordinates of the center of the circle, followed by <code class="code-inline tex2jax_ignore">circle</code>, then the radius length in parentheses.</div>
+<div class="code-box"><pre class="program"><code class="language-latex">\draw (0,0) circle (3);
+\draw (3,3) circle (1);
+\fill (0,0) circle (1cm); % fill works like draw, but fills instead
+</code></pre></div>
+</dd>
+<dt id="tikz-graphics-5-2-2-1-3">Ellipses</dt>
+<dd>
+<div class="para" id="tikz-graphics-5-2-2-1-3-2">Ellipses are like circles but take in two radii.</div>
+<div class="code-box"><pre class="program"><code class="language-latex">\draw (0,0) ellipse (1 and 2);
+\draw (3,3) ellipse (3 and 1);
+\filldraw[color=red, fill=blue] (-2, 2) ellipse (0.5, 4); 
+% filldraw does both, with the ability to control them separately!
+</code></pre></div>
+</dd>
+<dt id="tikz-graphics-5-2-2-1-4">Arcs</dt>
+<dd>
+<div class="para" id="tikz-graphics-5-2-2-1-4-2">Arcs can be drawn by specifying the start point, angles, and radius. Note that the arc is not like the circle; the start point is not the center of the arc.</div>
+<div class="code-box"><pre class="program"><code class="language-latex">\draw (0,0) arc (0:90:1); % start at 0 degrees, arc to 90 degrees, with a radius of 1
+\draw (0,0) arc (90:0:1); % start at 90 degrees, arc to 0 degrees, with a radius of 1
+\draw[-&gt;] (2,2) arc (90:270:1); % the -&gt; parameter adds an arrow to the end.
+</code></pre></div>
+</dd>
+<dt id="tikz-graphics-5-2-2-1-5">Rectangles</dt>
+<dd>
+<div class="para" id="tikz-graphics-5-2-2-1-5-2">Rectangles can be drawn using two opposite corners.</div>
+<div class="code-box"><pre class="program"><code class="language-latex">\draw (0,0) rectangle (1,2); 
+\filldraw[ultra thick, color=red, fill=red!50] (0,0) rectangle (-1,2); 
+% The parameter !%% lets you add a percentage opacity!
+</code></pre></div>
+</dd>
+</dl>
+<div class="para">I can’t list every combination of features here, but options for colors include white, black, red, green, blue, cyan, magenta, yellow; and thickness options include ultra thin, very thin, thin, thick, very thick, and ultra thick.</div>
+</div></section></section><section class="section" id="tikz-graphics-6"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.3</span><span class="space"> </span><span class="title">Your drawings</span>
 </h3>
-<section class="paragraphs" id="figures-8-2"><div class="para" id="figures-8-2-1">When you are finished with your document, download the PDF and ZIP files to upload and submit for your lab assignment.</div></section></section></section></div>
+<section class="paragraphs" id="tikz-graphics-6-2"><div class="para" id="tikz-graphics-6-2-1">Create a drawing using TiKZ, with at least three shapes. Use <code class="code-inline tex2jax_ignore">draw</code>, <code class="code-inline tex2jax_ignore">fill</code>, and <code class="code-inline tex2jax_ignore">filldraw</code> at least once each, and use a few different colors and opacities.</div>
+<div class="para" id="tikz-graphics-6-2-2">Then, in a separate <code class="code-inline tex2jax_ignore">tikzpicture</code> environment, try to replicate this visual proof of the pythagorean theorem. You can use different colors and other choices.</div>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/tikz-graphics-6-2-3.svg" role="img" class="contained"></div></section></section><section class="section" id="tikz-graphics-7"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.4</span><span class="space"> </span><span class="title">Saving and sharing your document</span>
+</h3>
+<section class="paragraphs" id="tikz-graphics-7-2"><div class="para" id="tikz-graphics-7-2-1">When you are finished with your document, download the PDF and ZIP files to upload and submit for your lab assignment.</div></section></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="math-symbols.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="tikz-graphics.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="figures.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

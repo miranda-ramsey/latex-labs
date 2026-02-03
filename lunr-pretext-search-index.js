@@ -145,6 +145,24 @@ var ptx_lunr_docs = [
   "body": "wrapping "
 },
 {
+  "id": "tikz-graphics",
+  "level": "1",
+  "url": "tikz-graphics.html",
+  "type": "Lab",
+  "number": "4",
+  "title": "TikZ Playground",
+  "body": " TikZ Playground   With this lab, we will begin to explore the broad utility of the TikZ package for creating figures, diagrams, and graphs within your document.      Explore the TikZ package.      Setting up your project     Begin by creating a new blank project. Navigate to and click \"New Project\" in the top right. Name your project \"lastname-lab-4\" and then change the title in the \\title{} command like you did in Lab 1.    We want to include the tikz package, which lets us use the tikzpicture environment. Include any other packages you want to for your document.  \\documentclass{article} \\usepackage{tikz} \\title{Lab 4: TikZ Playground} ...    Now your project is ready for math!     Basic shapes   The tikzpicture environment creates a visual space where you can draw objects by inputting coordinates and commands. We will start with the draw command. Each drawing needs to end with a semicolon (;). \\begin{tikzpicture} \\draw ... ; \\draw ... ; ... \\end{tikzpicture}   Use the following explanations and examples to play with different shapes in a tikz environment.   Lines  Lines are drawn by listing the coordinates of endpoints with -- between them. You can chain lines together when they share endpoints.  \\draw (0,0) -- (2,0); \\draw (1,1) -- (2,-1) -- (-1,-1); \\draw[very thick, blue] (0,0) -- (-1,-1); % Lots of parameters work in [square brackets]    Circles  Circles are drawn by first writing the coordinates of the center of the circle, followed by circle , then the radius length in parentheses.  \\draw (0,0) circle (3); \\draw (3,3) circle (1); \\fill (0,0) circle (1cm); % fill works like draw, but fills instead    Ellipses  Ellipses are like circles but take in two radii.  \\draw (0,0) ellipse (1 and 2); \\draw (3,3) ellipse (3 and 1); \\filldraw[color=red, fill=blue] (-2, 2) ellipse (0.5, 4); % filldraw does both, with the ability to control them separately!    Arcs  Arcs can be drawn by specifying the start point, angles, and radius. Note that the arc is not like the circle; the start point is not the center of the arc.  \\draw (0,0) arc (0:90:1); % start at 0 degrees, arc to 90 degrees, with a radius of 1 \\draw (0,0) arc (90:0:1); % start at 90 degrees, arc to 0 degrees, with a radius of 1 \\draw[->] (2,2) arc (90:270:1); % the -> parameter adds an arrow to the end.    Rectangles  Rectangles can be drawn using two opposite corners.  \\draw (0,0) rectangle (1,2); \\filldraw[ultra thick, color=red, fill=red!50] (0,0) rectangle (-1,2); % The parameter !%% lets you add a percentage opacity!   I can't list every combination of features here, but options for colors include white, black, red, green, blue, cyan, magenta, yellow; and thickness options include ultra thin, very thin, thin, thick, very thick, and ultra thick.     Your drawings   Create a drawing using TiKZ, with at least three shapes. Use draw , fill , and filldraw at least once each, and use a few different colors and opacities.  Then, in a separate tikzpicture environment, try to replicate this visual proof of the pythagorean theorem. You can use different colors and other choices.        Saving and sharing your document   When you are finished with your document, download the PDF and ZIP files to upload and submit for your lab assignment.    "
+},
+{
+  "id": "tikz-graphics-3",
+  "level": "2",
+  "url": "tikz-graphics.html#tikz-graphics-3",
+  "type": "Objectives",
+  "number": "4",
+  "title": "",
+  "body": "   Explore the TikZ package.    "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
